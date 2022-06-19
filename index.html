@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive pricing component</title>
+</head>
+
+<body>
+  <section class="cta">
+    <h1 class="cta-header">Simple, traffic-based pricing</h1>
+    <p class="cta-body">Sign-up for our 30-day trial. No credit card required.</p>
+  </section>
+
+  <main>
+    <section class="pricing">
+      <p class="view-count"><span id="view-count">0</span>K Pageviews</p>
+      <input type="range" min="0" max="200" step="1" id="range-slider">
+      <p class="money"><span id="money">$0.00</span>/ month</p>
+    </section>
+
+    <section class="billing">
+      <p>Monthly Billing</p>
+      <label class="switch">
+        <input type="checkbox" id="billing-select">
+        <span class="slider round"></span>
+      </label>
+      <p>Yearly Billing <span class="discount">-25%</span></p>
+    </section>
+
+    <section class="tags">
+      <section class="tags-container">
+        <p><img src="images/icon-check.svg">Unlimited websites</p>
+        <p><img src="images/icon-check.svg">100% data ownership</p>
+        <p><img src="images/icon-check.svg">Email reports</p>
+      </section>
+      <button>Start my trial</button>
+
+    </section>
+
+
+  </main>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>

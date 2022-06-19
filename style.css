@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --Soft-Cyan: hsl(174, 77%, 80%);
+    --Strong-Cyan: hsl(174, 86%, 45%);
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    --Light-Red: hsl(15, 100%, 70%);
+    --Pale-Blue: hsl(226, 100%, 87%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Pale-Blue: hsl(230, 100%, 99%);
+    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue: hsl(223, 50%, 87%);
+    --Grayish-Blue: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+
+
+}
+
+html {
+    font-family: 'Manrope', sans-serif;
+    font-size: 62.5%;
+    color: var(--Grayish-Blue);
+}
+
+body {
+    background: var(--Very-Pale-Blue);
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+    font-family: 'Manrope', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Typography */
+.cta {
+    text-align: center;
+}
+
+.cta-header {
+    font-family: 800;
+    color: var(--Dark-Desaturated-Blue);
+    font-size: 2rem;
+}
+
+.cta-body {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 2.3rem;
+
+}
+
+.view-count {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1.71px;
+    text-transform: uppercase;
+}
+
+.money {
+    font-size: 1.4rem;
+}
+
+#money {
+    color: var(--Dark-Desaturated-Blue);
+    font-size: 3.2rem;
+    letter-spacing: -0.8px;
+    font-weight: 800;
+}
+
+.billing p {
+    font-size: 1.2rem;
+}
+
+.tags p {
+    font-size: 1.2rem;
+}
+
+button {
+    color: var(--Pale-Blue);
+    background: var(--Dark-Desaturated-Blue);
+    border: none;
+}
+
+/* Layout */
+/* body {
+    background: url(images/bg-pattern.svg) no-repeat;
+
+} */
+
+.cta {
+    padding: 8rem 3rem 2rem 3rem;
+    background: url(images/pattern-circles.svg) no-repeat;
+    background-position: center;
+}
+
+.cta-body {
+    padding: 1rem 7rem;
+}
+
+main{
+    background-color: var(--White);
+    border-radius: .8rem;
+    margin: 2.5rem;
+    text-align: center;
+    box-shadow:  0rem 1rem 1rem .5rem rgb(0 0 0 / 0.1);
+}
+/* 
+---------------
+Pricing Section
+--------------- */
+.view-count{
+    padding: 3rem 0rem;
+}
+#range-slider{
+    width: 27rem;
+}
+
+ .money{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+ }
+
+
+/* 
+---------------
+Billing Section
+--------------- */
+.billing{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin: 3rem 0rem;
+}
+
+
+.discount{
+    position: absolute;
+    color: var(--Light-Red);
+    font-weight: 800;
+    background: var(--Light-Grayish-Red);
+    border-radius: 9.5px;
+    width: 1rem;
+    width: 4rem;
+    right: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4.3rem;
+    height: 2.2rem;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4rem;
+    width: 1.4rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--Strong-Cyan);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(2.2rem);
+    -ms-transform: translateX(2.2rem);
+    transform: translateX(2.2rem);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+/* 
+-----------
+Tag section
+-----------*/
+.tags{
+    border-top: 1px solid var(--Light-Grayish-Blue);
+}
+.tags-container{
+    margin: 2rem 0rem;
+}
+.tags p{
+    padding: .5rem 0rem;
+}
+
+.tags p img{
+    padding-right: 1rem;
+}
+
+button{
+   height: 4rem;
+   width: 17rem;
+    border-radius: 2.5rem;
+    margin-bottom: 4rem;
+}
