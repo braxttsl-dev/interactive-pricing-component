@@ -14,7 +14,7 @@
     --Pale-Blue: hsl(226, 100%, 87%);
     --White: hsl(0, 0%, 100%);
     --Very-Pale-Blue: hsl(230, 100%, 99%);
-    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    --Light-Gray-Blue: hsl(224, 65%, 95%);
     --Light-Grayish-Blue: hsl(223, 50%, 87%);
     --Grayish-Blue: hsl(225, 20%, 60%);
     --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
@@ -72,6 +72,9 @@ button {
 .money {
     font-size: 1.4rem;
 }
+.desktop {
+    display: none;
+}
 
 #money {
     color: var(--Dark-Desaturated-Blue);
@@ -95,15 +98,16 @@ button {
 }
 
 /* Layout */
-/* body {
+body {
     background: url(images/bg-pattern.svg) no-repeat;
+    background-position: .5rem -3rem;
 
-} */
+}
 
 .cta {
-    padding: 8rem 3rem 2rem 3rem;
+    padding: 8rem 3rem 4rem 3rem;
     background: url(images/pattern-circles.svg) no-repeat;
-    background-position: center;
+    background-position: 50% 4.5rem;
 }
 
 .cta-body {
@@ -125,8 +129,28 @@ Pricing Section
     padding: 3rem 0rem;
 }
 #range-slider{
-    width: 27rem;
+    width: 80%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--Soft-Cyan);
+    height: .8rem;
+    border-radius: .5rem;
 }
+
+#range-slider::-webkit-slider-thumb,
+#range-slider::-moz-range-thumb{
+    cursor: pointer;
+    background: url(images/icon-slider.svg) no-repeat center var(--Strong-Cyan);
+    border: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 3px 1px var(--Soft-Cyan);
+
+}
+
+
+
 
  .money{
     display: flex;
@@ -135,6 +159,10 @@ Pricing Section
     align-items: center;
     gap: 1rem;
     padding-top: 2rem;
+ }
+
+ .desktop{
+    display: none;
  }
 
 
@@ -151,16 +179,23 @@ Billing Section
     margin: 3rem 0rem;
 }
 
-
 .discount{
+    position: relative;
+
+}
+
+
+.discount::after{
+    content: '25%';
     position: absolute;
+    width: 4rem;
+    height: 2rem;
     color: var(--Light-Red);
     font-weight: 800;
     background: var(--Light-Grayish-Red);
     border-radius: 9.5px;
-    width: 1rem;
-    width: 4rem;
-    right: 1rem;
+    left: 8rem;
+    
 }
 
 .switch {
@@ -247,4 +282,84 @@ button{
    width: 17rem;
     border-radius: 2.5rem;
     margin-bottom: 4rem;
+}
+
+@media screen and (min-width:768px){
+    body{
+        background: url(images/bg-pattern.svg) no-repeat var(--Light-Gray-Blue);
+    }
+
+    main{
+        width: 54rem;
+        height: 39rem;
+        margin: 8rem auto;
+        
+    }
+
+    .tags{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    button{
+        margin-bottom: 0rem;
+    }
+
+    .pricing{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .mobile{
+    display: none;
+   }
+   
+   .desktop{
+    display: block;
+   }
+
+   .money{
+    align-items: center;
+   }
+
+   .info-desktop{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 0rem;
+   }
+
+   .view-count,
+   .money{
+    padding: 0;
+   }
+
+   #range-slider{
+    margin-bottom: 3rem;
+   }
+
+   .discount::after{
+    content: '25% discount';
+    position: absolute;
+    width: 8rem;
+    height: 2rem;
+    color: var(--Light-Red);
+    font-weight: 800;
+    background: var(--Light-Grayish-Red);
+    border-radius: 9.5px;
+    font-size: 1rem;
+    left: 8rem;
+
+    
+}
+
+   .billing{
+    margin-bottom: 4rem;
+   }
+
+
 }
