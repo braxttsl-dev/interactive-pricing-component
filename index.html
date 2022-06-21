@@ -20,18 +20,21 @@
 
   <main>
     <section class="pricing">
-      <p class="view-count"><span id="view-count">0</span>K Pageviews</p>
-      <input type="range" min="0" max="200" step="1" id="range-slider">
-      <p class="money"><span id="money">$0.00</span>/ month</p>
+      <section class="info-desktop">
+        <p class="view-count"><span id="view-count">100</span>K Pageviews</p>
+      <p class="money desktop"><span id="money">$16.00</span>/ month</p>
+    </section>
+      <input type="range" min="0" max="200" step="20" value="50" id="range-slider">
+      <p class="money mobile"><span id="money">$16.00</span>/ month</p>
     </section>
 
     <section class="billing">
       <p>Monthly Billing</p>
       <label class="switch">
-        <input type="checkbox" id="billing-select">
+        <input type="checkbox" id="billing-select" value="off">
         <span class="slider round"></span>
       </label>
-      <p>Yearly Billing <span class="discount">-25%</span></p>
+      <p class="discount">Yearly Billing</p>
     </section>
 
     <section class="tags">
